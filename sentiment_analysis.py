@@ -92,7 +92,7 @@ def tweets_emotion_graph(emotions_count):
     fig, ax = plt.subplots()
     ax.bar(emotions_count.keys(), emotions_count.values())
     fig.autofmt_xdate()
-    plt.title(str('Emotion Analysis of '))
+    plt.title('Emotion Analysis')
     plt.savefig('emotions_count.png')
     plt.show()
 
