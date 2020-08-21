@@ -9,7 +9,7 @@ Uses Twitter's API through tweepy to get tweets of a particular twitter handle. 
 
 ---
 ## sentiment_analysis.py 
-Uses Python's nltk library to output a sentiment score of the tweets. Preprocessing is done using the nltk.corpus stopwords and nltk.word_tokenize followed by emotion detection for the tweets. The 'emotions_count.png' is a graph showing the prominent emotions present in the user's tweets. 
+Uses Python's nltk library to output a sentiment score of the tweets. Preprocessing is done using the nltk.corpus stopwords and nltk.word_tokenize followed by emotion detection for the tweets. The 'emotions_count.png' is a graph showing the prominent emotions present in the user's tweets. Finally the sentiment score is calculated with nltk's SentimentIntensityAnalyzer module.
 
 For this example I have used Lebron James' latest tweets (as of 20 August 2020)
 https://twitter.com/KingJames?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
