@@ -4,5 +4,5 @@
 ###############################################################
 import nltk 
 
-# remove 'all' parameter if you want to install only specific packages
+# do not include 'all' parameter if you want to install only specific packages
 nltk.download('all')
