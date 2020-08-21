@@ -1,14 +1,9 @@
 import tweepy
+import config
 
-twitter_keys = {
-    'consumer_key':  'sXmqT5WkYqvBHS3VrkvU59XfE',
-    'consumer_secret': 'AicnXM0h4bNZWEsMyC2G15uBvTcUhoqDX9aBCtSWLiXVx5tv0n',
-    'access_token_key': '1295774256874348545-fwhlV4lGah7OHZWzpzgl4LP5rUwJrJ',
-    'access_token_secret': 'PDWlHtG5zi7kYhDKGFFs24bZeB74D7WIUWyaCDlVALtCz'
-}
 
-auth = tweepy.OAuthHandler(twitter_keys['consumer_key'], twitter_keys['consumer_secret'])
-auth.set_access_token(twitter_keys['access_token_key'], twitter_keys['access_token_secret'])
+auth = tweepy.OAuthHandler(config.consumer_key, config.consumer_secret)
+auth.set_access_token(config.access_token_key, config.access_token_secret)
 
 api = tweepy.API(auth)
 
