@@ -11,34 +11,17 @@ user_name = 'KingJames'
 user = api.get_user(user_name)
 print(user.screen_name)
 print('------------------------------------')
+
 print(user.followers_count)
 print('------------------------------------')
 
 tweets = api.user_timeline(user.screen_name, count=10)
 for tweet in tweets:
     print(tweet.text)
-
-
-
 print('------------------------------------')
+
 print(tweets[0].text)
-
-'''public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print(tweet.text)'''
-
-'''user = api.get_user('MKBHD')'''
-
-'''print(user.screen_name)
-print(user.followers_count)'''
-
-
-'''for friend in user.friends():
-   print(friend.screen_name)
-'''
-
-
-#print(tweets[0])
+print('------------------------------------')
 
 import json
 
