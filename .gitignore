@@ -1,3 +1,6 @@
 __pycache__
 config.py
 .vscode/settings.json
+tweets.csv
+text.txt
+emotions_count.png
