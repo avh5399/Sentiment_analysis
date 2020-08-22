@@ -13,8 +13,10 @@ def auth_init(consumer_key,
               access_token_key,
               access_token_secret
               ):
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token_key, access_token_secret)
+    #Twitter API Oatuh           
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret) #replace with your own consumer key and consumer secret key
+    auth.set_access_token(access_token_key, access_token_secret) #replace with your own access tokey key and acccess toke nsecret key 
+
     api = tweepy.API(auth)
     return api
 
@@ -23,7 +25,7 @@ def auth_init(consumer_key,
 ###############################################################
 def get_tweets(userID):
     tweets_data = []
-    api = auth_init(config.consumer_key, config.consumer_secret, config.access_token_key, config.access_token_secret)
+    api = auth_init(config.consumer_key, config.consumer_secret, config.access_token_key, config.access_token_secret) #pass your won twiiter api credentials 
     
     tweets = api.user_timeline(screen_name=userID,
                                count=10,
@@ -51,7 +53,7 @@ def get_tweets(userID):
 ###############################################################
 def get_tweets_text(tweets_data):
     tweets_text = []
-    tweets_text.extend([str(tweet.full_text)] for tweet in tweets_data)
+    tweets_text.extend([str(tweet.full_text)] for tweet in tweets_data) #store only the text of the tweets 
     return tweets_text
 
 ###############################################################
@@ -59,7 +61,7 @@ def get_tweets_text(tweets_data):
 ###############################################################
 def tweets_csv(tweets):
     tw_df = pd.DataFrame(tweets, columns=["tweet"])
-    tw_df.to_csv('tweets.csv', index = False, encoding='utf-8')
+    tw_df.to_csv('tweets.csv', index = False, encoding='utf-8') #create 'tweets.csv' to store tweets 
 
 ###############################################################
 # main
